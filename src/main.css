@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkGreen: #1a2824;
+    --green: #24382f;
+    --grey: #afc1b6;
+    --lightGreen: #648374;
+    --red: #4c1501;
+}
+
+body {
+    overflow: hidden;
+}
+
+#root {
+    width: 100%;
+    height: 100dvh;
+
+    background-color: var(--lightGreen);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@layer components {
+    header {
+        @apply px-3 flex justify-between items-center
+        border-b-4 border-green h-[100px] select-none;
+    }
+    .description {
+        @apply flex items-center gap-2;
+    }
+    .logo {
+        @apply text-darkGreen w-14 h-14;
+    }
+    .logo-text {
+        @apply text-green font-bold text-xl leading-4;
+    }
+    .logo-text span {
+        @apply ml-3 text-darkGreen;
+    }
+
+    .converter {
+        @apply w-full h-auto flex items-center justify-center max-[800px]:flex-col;
+    }
+
+    .convert-icon {
+        @apply w-16 h-16 text-darkGreen;
+    }
+
+    .field {
+        @apply bg-grey p-1;
+    }
+    .field select,
+    .field input {
+        @apply bg-transparent;
+    }
+
+    footer {
+        @apply border-t-4 border-darkGreen h-[80px] flex gap-2 items-center justify-center;
+    }
+    .link {
+        @apply w-9 h-9 text-green hover:text-darkGreen;
+    }
+
+    .error-block {
+        @apply absolute top-[140px] flex items-center justify-center flex-col text-center text-grey bg-red bg-opacity-60 w-[500px] h-[200px] max-[500px]:w-[85%];
+    }
+    .error-block h2 {
+        @apply text-2xl font-extrabold;
+    }
+}
