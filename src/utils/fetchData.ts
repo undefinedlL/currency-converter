@@ -1,11 +1,13 @@
 import { RatesType } from '../types';
 import { handleFetchError } from './ErrorHandler';
+import { initialRatesState } from './variables';
 
 export const fetchRates = async () => {
     try {
         const response = await fetch(
             `${import.meta.env.VITE_API_URL}?app_id=${import.meta.env.VITE_API_ID}`
         );
+
         const data = await response.json();
         const rates: RatesType = {
             USD: data.rates['USD'],
@@ -20,5 +22,6 @@ export const fetchRates = async () => {
     } catch (error) {
         // Здесь мы просто возвращаем сообщение об ошибке
         handleFetchError(error);
+        return initialRatesState;
     }
 };
