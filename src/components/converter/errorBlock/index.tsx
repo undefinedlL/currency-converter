@@ -1,4 +1,6 @@
-const ErrorBlock = () => {
+import { FC } from 'react';
+
+const ErrorBlock: FC = () => {
     return (
         <div className="error-block">
             <h2>Something went wrong</h2>

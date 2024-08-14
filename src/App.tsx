@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { Header, Converter, Footer } from './components';
 
-const App = () => {
+const App: FC = () => {
     return (
         <>
             <Header />

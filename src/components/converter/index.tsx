@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { TbArrowsExchange } from 'react-icons/tb';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from './loader';
@@ -7,7 +7,7 @@ import { AppDispatch, RootState } from '../../app/store';
 import { initialRatesState } from '../../utils/variables';
 import ErrorBlock from './errorBlock';
 
-const Converter = () => {
+const Converter: FC = () => {
     const [amount, setAmount] = useState<number>(0);
     const [convertedAmount, setConvertedAmount] = useState<number>(0);
     const [from, setFrom] = useState<string>('USD');

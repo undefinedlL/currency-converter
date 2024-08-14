@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { FaGithub, FaTelegram } from 'react-icons/fa6';
 
-const Footer = () => {
+const Footer: FC = () => {
     return (
         <footer>
             <a href="https://github.com/undefinedlL" target="_blank">
