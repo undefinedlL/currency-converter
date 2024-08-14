@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { FaMoneyBillTransfer } from 'react-icons/fa6';
 
-const Header = () => {
+const Header: FC = () => {
     return (
         <header>
             <div className="description">

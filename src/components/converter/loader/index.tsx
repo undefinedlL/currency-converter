@@ -1,4 +1,6 @@
-const Loader = () => {
+import { FC } from "react";
+
+const Loader: FC = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
