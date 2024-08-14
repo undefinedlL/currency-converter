@@ -1,2 +1,3 @@
-# Currency Converter 
+# Currency Converter
+
 -> React, Redux toolkit

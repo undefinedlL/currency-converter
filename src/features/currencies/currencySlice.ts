@@ -16,7 +16,7 @@ export const fetchData = createAsyncThunk('currencies/fetchData', async () => {
         return response;
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-        handleFetchError(error);
+        return Promise.reject(handleFetchError(error));
     }
 });
 

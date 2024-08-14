@@ -29,6 +29,13 @@ const Converter = () => {
         }
     };
 
+    const onChangeAmount = (e: React.ChangeEvent<HTMLInputElement>) =>
+        setAmount(Number(e.target.value));
+    const onChangeFrom = (e: React.ChangeEvent<HTMLSelectElement>) =>
+        setFrom(e.target.value);
+    const onChangeTo = (e: React.ChangeEvent<HTMLSelectElement>) =>
+        setTo(e.target.value);
+
     return (
         <div className="converter">
             {error && <ErrorBlock />}
@@ -37,13 +44,13 @@ const Converter = () => {
                     type="number"
                     className="focus:outline-none p-1"
                     value={amount}
-                    onChange={(e) => setAmount(Number(e.target.value))}
+                    onChange={onChangeAmount}
                     disabled={Boolean(error)}
                 />
                 <select
                     value={from}
                     className="p-1"
-                    onChange={(e) => setFrom(e.target.value)}
+                    onChange={onChangeFrom}
                     disabled={Boolean(error)}
                 >
                     {Object.keys(rates).map((key) => (
@@ -71,7 +78,7 @@ const Converter = () => {
                 <select
                     value={to}
                     className="p-1"
-                    onChange={(e) => setTo(e.target.value)}
+                    onChange={onChangeTo}
                     disabled={Boolean(error)}
                 >
                     {Object.keys(rates).map((key) => (

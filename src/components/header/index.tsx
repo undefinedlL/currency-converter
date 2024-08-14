@@ -10,9 +10,9 @@ const Header = () => {
                     <span>Converter</span>
                 </h2>
             </div>
-            <div className="timestamp">
+            {/* <div className="timestamp">
                 <p>Date</p>
-            </div>
+            </div> */}
         </header>
     );
 };

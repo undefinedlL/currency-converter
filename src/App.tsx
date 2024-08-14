@@ -1,6 +1,4 @@
-import Converter from './components/converter';
-import Footer from './components/footer';
-import Header from './components/header';
+import { Header, Converter, Footer } from './components';
 
 const App = () => {
     return (
